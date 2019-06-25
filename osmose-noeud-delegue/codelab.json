@@ -3,8 +3,8 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2019-06-25T16:19:08Z",
-  "id": "osmose-noeud-delegue",
+  "updated": "2019-06-25T16:35:10Z",
+  "id": "",
   "duration": 0,
   "title": "Déploiement d'un noeud OSMOSE via Docker",
   "authors": "Jee",
@@ -19,5 +19,5 @@
   ],
   "tags": [],
   "feedback": "https://github.com/osmose-collective/tutorials/issues",
-  "url": "osmose-noeud-delegue"
+  "url": ""
 }
