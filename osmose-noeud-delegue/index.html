@@ -29,15 +29,16 @@
     
       <google-codelab-step label="Introduction" duration="0">
         <h2 is-upgraded><strong>Osmose</strong></h2>
-<p>Grâce à ce codelab vous allez monter un noeud forgeur sur la blockchain Osmose.</p>
-<p>Cette étape est nécessaire pour soumettre votre candidature en tant que délégué.</p>
-<p>Si vous rencontrez des difficultés lors de ce codelab, n&#39;hésitez pas à demander de l&#39;aide sur le slack dans le channel dédié.</p>
+<p>Grâce à ce codelab vous allez monter un noeud forgeur sur la blockchain Osmose.<br>Cette étape est nécessaire pour soumettre votre candidature en tant que délégué.</p>
+<h2 is-upgraded><strong>Feedback, question, suggestion d&#39;amélioration</strong></h2>
+<p>Pour tout feedback ou question vous pouvez utiliser<a href="https://github.com/osmose-collective/tutorials/issues" target="_blank"> le formulaire dédié à cet effet</a>.<br>Pour suggérer des améliorations, vous pouvez commenter le codelab <a href="https://docs.google.com/document/d/1iJzcKuvbIe0GwTcHgo713VLS9VHyVraZl-SziWHwinE/edit?usp=sharing" target="_blank">à cette adresse.</a><br>Enfin,  <a href="https://osmosecollective.slack.com/messages/CKHT2GYBD" target="_blank">un channel dédié</a> est à votre disposition dans le slack du collectif.</p>
 <h2 is-upgraded><strong>Explorer testnet OSMOSE</strong></h2>
 <p><a href="http://testnet.osmose.world/#/" target="_blank"><paper-button class="colored" raised>Explorer testnet OSMOSE </paper-button></a></p>
 <h2 is-upgraded><strong>Wallet mobile et desktop</strong></h2>
-<p><a href="https://github.com/osmose-collective/desktop-wallet" target="_blank"><paper-button class="colored" raised>Git du wallet ARK </paper-button></a> (non rebrandé qui se connecte au testnet OSMOSE)</p>
+<p><a href="https://github.com/osmose-collective/desktop-wallet" target="_blank"><paper-button class="colored" raised>Git du wallet ARK </paper-button></a> (non rebrandé et qui se connecte au testnet OSMOSE)</p>
 <p><a href="https://github.com/osmose-collective/mobile-wallet" target="_blank"><paper-button class="colored" raised>Git du wallet Osmose</paper-button></a></p>
 <p><a href="https://play.google.com/store/apps/details?id=io.osmoseworld.wallet.mobile&hl=en_US" target="_blank"><paper-button class="colored" raised>Play store</paper-button></a></p>
+<p>.</p>
 
 
       </google-codelab-step>
@@ -52,7 +53,7 @@
 <p>Nous vous conseillons les fournisseurs de serveur cloud suivant :  </p>
 <p><a href="https://www.scaleway.com/" target="_blank"><paper-button class="colored" raised>Scaleway</paper-button></a> <a href="https://www.digitalocean.com/" target="_blank"><paper-button class="colored" raised>Digital Ocean</paper-button></a> </p>
 <p>La version de linux recommandée et présentée dans le cadre de ce guide est <strong>Ubuntu Server bionic 18.04</strong>.</p>
-<p>Si vous avez déjà un serveur, aller directement à la partie &#34;3. Installation de docker&#34;.</p>
+<p>Si vous avez déjà un serveur, allez directement à la partie &#34;3. Installation de docker&#34;.</p>
 <h2 is-upgraded><strong>Création de compte</strong></h2>
 <p>A défaut d&#39;avoir un serveur, vous pouvez suivre ces étapes afin de créer un server cloud vps chez Scaleway.</p>
 <p>Pour cela, commencez par vous créer un compte.</p>
@@ -74,42 +75,51 @@
 </td><td colspan="1" rowspan="1"><p class="image-container"><img style="width: 167.50px" src="img\40847bcb78315458.png"></p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p>Sélectionnez une instance de développement DEV1-L pour un noeud forgeur.</p>
-<p>(Ou DEV1-M pour un noeud relay).</p>
+<p>(Ou DEV1-M pour un noeud relay)</p>
 </td><td colspan="1" rowspan="1"><p class="image-container"><img style="width: 271.50px" src="img\1c0db5e7dbbe1029.png"></p>
 </td></tr>
-<tr><td colspan="1" rowspan="1"><p>Les étapes 4, 5 et 6 ne nécessitent pas d&#39;action particulière.</p>
+<tr><td colspan="1" rowspan="1"><p>Les étapes 4, 5 et 6 ne nécessitent pas d&#39;action particulière</p>
 </td><td colspan="1" rowspan="1"><p>...</p>
 </td></tr>
-<tr><td colspan="1" rowspan="1"><p>Pour terminer la création de l&#39;instance, ajoutez une clé SSH en cliquant sur ‘Add a new SSH key&#39;.</p>
+<tr><td colspan="1" rowspan="1"><p>Pour terminer la création de l&#39;instance, ajoutez une clé SSH en cliquant sur ‘Add a new SSH key&#39;</p>
 </td><td colspan="1" rowspan="1"><p class="image-container"><img style="width: 396.00px" src="img\6c83e5b6d10e6f7e.png"></p>
 </td></tr>
 </table>
 <h2 is-upgraded><strong>Création d&#39;une clé SSH</strong></h2>
 <p>A ce stade de la création de notre instance faisons une brève pause pour générer cette fameuse clé SSH.</p>
 <table>
-<tr><td colspan="1" rowspan="1"><p>Commencez par télécharger PuTTY :  </p>
-<p><a href="https://www.puttygen.com/" target="_blank"><paper-button class="colored" raised>PuTTY</paper-button></a></p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Lancez PuTTYgen, cliquez sur Generate puis bougez votre souris de manière aléatoire dans la zone située sous la barre de chargement jusqu&#39;à ce que cette dernière soit remplie.</p>
+<tr><td colspan="1" rowspan="1"><ul>
+<li>Commencez par télécharger PuTTY : <a href="https://www.puttygen.com/" target="_blank"><paper-button class="colored" raised>PuTTY</paper-button></a></li>
+<li>Lancez PuTTYgen</li>
+<li>Cliquez sur Generate </li>
+<li>Puis bougez votre souris de manière aléatoire dans la zone située sous la barre de chargement jusqu&#39;à ce que cette dernière soit remplie.</li>
+</ul>
 </td><td colspan="1" rowspan="1"><p class="image-container"><img style="width: 396.00px" src="img\c846809bc87678d2.png"></p>
 </td></tr>
-<tr><td colspan="1" rowspan="1"><p>Copiez le texte situez dans le cadre 1 (vous en aurez besoin à l&#39;étape suivante).</p>
-<p>Définissez un mot de passe en 2.</p>
-<p>Et enfin, pensez à sauvegarder votre clé publique et votre clé privée (vous en aurez besoin par la suite).</p>
+<tr><td colspan="1" rowspan="1"><ul>
+<li>Copiez le texte situé dans le cadre 1 (vous en aurez besoin à l&#39;étape suivante).</li>
+<li>Définissez un mot de passe en 2.</li>
+<li>Et enfin, pensez à sauvegarder votre clé publique (3) et votre clé privée (4) (vous en aurez besoin par la suite).</li>
+</ul>
 </td><td colspan="1" rowspan="1"><p class="image-container"><img style="width: 396.00px" src="img\edb9b130c786631e.png"></p>
 </td></tr>
 </table>
 <h2 is-upgraded><strong>Création d&#39;une nouvelle instance (1/2)</strong></h2>
 <p>Retour à notre création d&#39;instance, reprenons où nous en étions avec votre clé SSH copiée.</p>
 <table>
-<tr><td colspan="1" rowspan="1"><p>Collez votre clé dans le premier carré rouge, éventuellement une description dans le second pour pouvoir la distinguer et enfin cliquer sur ‘Add a SSH Key&#39;.</p>
+<tr><td colspan="1" rowspan="1"><ul>
+<li>Collez votre clé dans le premier carré rouge</li>
+<li>Ajoutez une description dans le second pour pouvoir la distinguer</li>
+<li>Et enfin cliquez sur ‘Add a SSH Key&#39;.</li>
+</ul>
 </td><td colspan="1" rowspan="1"><p class="image-container"><img style="width: 396.00px" src="img\66bfb41c9fe06048.png"></p>
 </td></tr>
-<tr><td colspan="1" rowspan="1"><p>Il ne vous reste plus qu&#39;à cliquer sur ‘create a new instance&#39;</p>
+<tr><td colspan="1" rowspan="1"><p>Cliquez sur ‘create a new instance&#39;</p>
 </td><td colspan="1" rowspan="1"><p class="image-container"><img style="width: 396.00px" src="img\c8ecb6c0396c5776.png"></p>
 </td></tr>
 </table>
 <h2 is-upgraded><strong>Lancement de votre instance</strong></h2>
+<p>Après quelques instants, votre instance sera monté et disponible. Il vous reste à y accéder et vous loguer pour pouvoir y installer votre noeud.</p>
 <table>
 <tr><td colspan="1" rowspan="1"><p>Pour accéder à votre instance, vous pouvez la retrouver en cliquant sur Instances dans le menu de gauche.</p>
 </td><td colspan="1" rowspan="1"><p class="image-container"><img style="width: 121.50px" src="img\a68c68a8f02a482.png"></p>
@@ -124,9 +134,8 @@
 </td><td colspan="1" rowspan="1"><p class="image-container"><img style="width: 396.00px" src="img\ab5444b73961b677.png"></p>
 </td></tr>
 </table>
-<p>Il ne vous reste plus qu&#39;à préciser le user : ubuntu</p>
-<p>Puis le mot de passe défini lors de la création de votre clé SSH,</p>
-<p>Et vous voici loggué.</p>
+<p>Une fenêtre s&#39;ouvre et vous demande votre login : tapez <em>ubuntu</em> puis appuyer sur Entrée.</p>
+<p>Complétez avec le mot de passe défini lors de la création de votre clé SSH puis appuyer sur Entrée.</p>
 <aside class="special"><p>Remarque : pour plus de sécurité, le mot de passe ne s&#39;affiche pas lorsque vous le tapez.</p>
 </aside>
 
@@ -134,7 +143,7 @@
       </google-codelab-step>
     
       <google-codelab-step label="Installation de docker" duration="0">
-        <p>Si vous avez déjà installé docker et docker-compose sur votre serveur, aller directement à la partie &#34;Installation du noeud OSMOSE&#34;.</p>
+        <p>Si vous avez déjà installé docker et docker-compose sur votre serveur, allez directement à la partie &#34;Installation du noeud OSMOSE&#34;.</p>
 <p><a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/" target="_blank"><paper-button class="colored" raised>Guide d&#39;installation de docker</paper-button></a></p>
 <p>Résumé des commandes à entrer dans la console :</p>
 <pre><code>sudo apt-get install \
@@ -165,16 +174,16 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io</code></pre>
 sudo chmod +x /usr/local/bin/docker-compose
 
 sudo usermod -aG docker utilisateur </code></pre>
-<aside class="special"><p>Remplacer utilisateur par le nom d&#39;utilisateur du système</p>
+<aside class="special"><p>Remplacez utilisateur par le nom d&#39;utilisateur du système</p>
 </aside>
-<aside class="warning"><p><strong>IMPORTANT</strong> : Déconnecter et reconnecter l&#39;utilisateur afin que l&#39;ajout au groupe docker soit effectif.</p>
+<aside class="warning"><p><strong>IMPORTANT</strong> : Déconnectez et reconnectez l&#39;utilisateur afin que l&#39;ajout au groupe docker soit effectif.</p>
 </aside>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Installation du noeud OSMOSE" duration="0">
-        <p>Aller dans le répertoire où vous souhaitez installer le noeud (Par défaut <strong>cd ~</strong>).</p>
+        <p>Allez dans le répertoire où vous souhaitez installer le noeud (Par défaut <strong>cd ~</strong>).</p>
 <pre><code>git clone https://github.com/osmose-collective/core
 cd core/docker/production/testnet
 docker-compose -f docker-compose-build.yml up -d</code></pre>
@@ -188,8 +197,8 @@ docker-compose -f docker-compose-build.yml up -d</code></pre>
       <google-codelab-step label="Configurer le noeud en mode forger" duration="0">
         <pre><code>cd core/docker/production/testnet
 nano testnet.env</code></pre>
-<p>Remplacer <strong>MODE=relay</strong> par <strong>MODE=forger</strong></p>
-<p>Puis mettre la passphrase du délégué dans <strong>DELEGATE_PASSPHRASE</strong></p>
+<p>Remplacez <strong>MODE=relay</strong> par <strong>MODE=forger</strong></p>
+<p>Puis mettez la passphrase du délégué dans <strong>DELEGATE_PASSPHRASE</strong></p>
 <p><strong>Par exemple : </strong></p>
 <pre><code>#MODE must be one of: relay or forger
 #relay: start a relay node only
@@ -197,19 +206,22 @@ nano testnet.env</code></pre>
 MODE=forger
 NETWORK=testnet
 DELEGATE_PASSPHRASE=trash swamp between indicate run belt toddler fade ranch bar slice prepare</code></pre>
-<p>Relancer les containers docker</p>
+<p>Relancez les containers docker</p>
 <pre><code>docker-compose -f docker-compose-build.yml up -d</code></pre>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Mise à jour du noeud" duration="0">
-        <p>Récupérer les derniers changements du repo git</p>
+        <p>Récupérez les derniers changements du repo git</p>
 <pre><code>cd core
+git pull</code></pre>
+<p>Si le git pull vous informe d&#39;un conflict, préparez votre passphrase (situé notamment dans docker/production/testnet/testnet.env) et faites un reset.</p>
+<pre><code>git reset --hard
 git pull</code></pre>
 <p>Rebuild les containers docker ayant été modifiés</p>
 <pre><code>docker-compose -f docker-compose-build.yml up --build -d</code></pre>
-<p>Relancer les containers</p>
+<p>Relancez les containers</p>
 <pre><code>docker-compose -f docker-compose-build.yml up -d</code></pre>
 
 
