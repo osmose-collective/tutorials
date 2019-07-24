@@ -31,7 +31,7 @@
         <h2 is-upgraded><strong>Osmose</strong></h2>
 <p>With this codelab you will deploy a delegate forging node on the Osmose Blockchain via Docker.</p>
 <h2 is-upgraded><strong>Feedback, question, suggestion</strong></h2>
-<p>For any feedback or question you can use the <a href="https://github.com/osmose-collective/tutorials/issues" target="_blank">git issue formulaire </a>.<br>Or you can directly suggest improvement or trouble within the <a href="https://docs.google.com/document/d/1iJzcKuvbIe0GwTcHgo713VLS9VHyVraZl-SziWHwinE/edit?usp=sharing" target="_blank">googledoc used to create the codelab</a> (comments)<br>Eventually, a <a href="https://osmosecollective.slack.com/messages/CKHT2GYBD" target="_blank">dedicated channel</a> is at your disposal in the Osmose Collective slack.</p>
+<p>For any feedback or question you can use the <a href="https://github.com/osmose-collective/tutorials/issues" target="_blank">git issue formulaire </a>.<br>Or you can directly suggest improvement or trouble within the <a href="https://docs.google.com/document/d/1OC7XTDVL3yOAYyPX29Oa2K8PI8ibQgJRbD82YzObopg" target="_blank">googledoc used to create the codelab</a> (comments)<br>Eventually, a <a href="https://osmosecollective.slack.com/messages/CKHT2GYBD" target="_blank">dedicated channel</a> is at your disposal in the Osmose Collective slack to initiate a direct conversation with the contributors.</p>
 <h2 is-upgraded><strong>Explorer testnet OSMOSE</strong></h2>
 <p><a href="http://testnet.osmose.world/#/" target="_blank"><paper-button class="colored" raised>Explorer testnet OSMOSE </paper-button></a></p>
 <h2 is-upgraded><strong>Wallet mobile and desktop</strong></h2>
@@ -121,9 +121,8 @@ DELEGATE_PASSPHRASE=trash swamp between indicate run belt toddler fade ranch bar
         <p>Retrieve the latest changes in the git repository</p>
 <pre><code>cd core
 git pull</code></pre>
-<p>Si jamais le git pull vous dit qu&#39;il y a des conflict, ayez votre passphrase à porter de main (par exemple dans le fichier docker/production/testnet/testnet.env) et faites un revert des changements</p>
-<pre><code>git reset --hard
-git pull</code></pre>
+<p>If the git pull tells you that there are conflicts, have your passphrase ready (for example in the docker/production/testnet/testnet.env file) and do a revert of the changes</p>
+<pre><code>git stash &amp;&amp; git pull &amp;&amp; git stash pop &amp;&amp; docker-compose -f</code></pre>
 <p>Rebuild docker containers that have been modified</p>
 <pre><code>cd docker/production/testnet
 docker-compose -f docker-compose-build.yml build</code></pre>
