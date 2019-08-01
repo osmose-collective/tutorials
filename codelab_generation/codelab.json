@@ -1,0 +1,23 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2019-07-29T08:37:34Z",
+  "id": "codelab_generation",
+  "duration": 0,
+  "title": "Codelab generation (Osmose collective)",
+  "authors": "Jee",
+  "summary": "This codelab aim to give all the necessary information to the Osmose collective to generate and keep updated the documentation of the Osmose blockchain and dapps.",
+  "source": "1sNL9dY_WOKGIMBx8YChRcdxSR4ASP--2rdFVIVrna44",
+  "theme": "codelab",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Codelab"
+  ],
+  "tags": [],
+  "feedback": "https://github.com/osmose-collective/tutorials/issues",
+  "url": "codelab_generation"
+}
