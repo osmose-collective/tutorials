@@ -1,15 +1,15 @@
 {
   "environment": "web",
-  "source": "1OC7XTDVL3yOAYyPX29Oa2K8PI8ibQgJRbD82YzObopg",
   "format": "html",
-  "prefix": "../../",
+  "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
   "updated": "2019-08-06T10:48:35Z",
   "id": "",
   "duration": 0,
   "title": "Deployment of an OSMOSE node via Docker",
-  "author": "Fabien Palazo",
+  "authors": "Fabien Palazo",
   "summary": "With this codelab you will deploy a delegate forging node on the Osmose Blockchain via Docker",
+  "source": "1OC7XTDVL3yOAYyPX29Oa2K8PI8ibQgJRbD82YzObopg",
   "theme": "delegate",
   "status": [
     "published"
