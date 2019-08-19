@@ -1,15 +1,15 @@
 {
   "environment": "web",
+  "source": "1iJzcKuvbIe0GwTcHgo713VLS9VHyVraZl-SziWHwinE",
   "format": "html",
-  "prefix": "https://storage.googleapis.com",
+  "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2019-08-06T10:47:31Z",
-  "id": "",
+  "updated": "2019-08-09T17:06:41Z",
+  "id": "osmose-noeud-delegue",
   "duration": 0,
   "title": "Déploiement d'un noeud OSMOSE via Docker",
-  "authors": "Jee",
+  "author": "Jee",
   "summary": "Dans ce codelab, vous allez lancer un noeud délégué forgeur sur la Blockchain Osmose grâce à Docker",
-  "source": "1iJzcKuvbIe0GwTcHgo713VLS9VHyVraZl-SziWHwinE",
   "theme": "delegue",
   "status": [
     "published"
@@ -19,5 +19,5 @@
   ],
   "tags": [],
   "feedback": "https://github.com/osmose-collective/tutorials/issues",
-  "url": ""
+  "url": "osmose-noeud-delegue"
 }
