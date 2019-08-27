@@ -7,12 +7,12 @@ echo off
 
 echo "Lancement de la mise a jour du tuto"
 
-set TUTO_ID=1OC7XTDVL3yOAYyPX29Oa2K8PI8ibQgJRbD82YzObopg
+set TUTO_ID=1iJzcKuvbIe0GwTcHgo713VLS9VHyVraZl-SziWHwinE
 
 echo "Extraction de contenu du googledocs"
 claat export %TUTO_ID% && cd .. && git add * && git commit -m 'update' && git pull && git push
 
-echo "Codelab mis à jour et partagé"
+echo "Codelab mis a jour et push sur git"
 
 echo.
 pause
