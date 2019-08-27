@@ -2,6 +2,7 @@
 # ------------------
 # Permet de convertir les tutos sous google docs en codelabs 
 # puis de les envoyer sur git via pull request
+echo off
 
 echo "Lancement de la mise à jour du tuto"
 
