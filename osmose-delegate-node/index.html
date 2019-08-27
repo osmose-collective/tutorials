@@ -7,34 +7,30 @@
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
   <title>Deployment of an OSMOSE node via Docker</title>
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+  <link rel="import" href="../../elements/codelab.html">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
-  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
   <style>
-    .success {
-      color: #1e8e3e;
-    }
-    .error {
-      color: red;
+    body {
+      font-family: "Roboto",sans-serif;
     }
   </style>
+  
 </head>
-<body>
-  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
-  <google-codelab codelab-gaid=""
-                  id=""
-                  title="Deployment of an OSMOSE node via Docker"
+<body unresolved class="fullbleed">
+
+  <google-codelab title="Deployment of an OSMOSE node via Docker"
                   environment="web"
                   feedback-link="https://github.com/osmose-collective/tutorials/issues">
     
       <google-codelab-step label="Introduction" duration="0">
-        <h2 is-upgraded><strong>Osmose</strong></h2>
+        <h2><strong>Osmose</strong></h2>
 <p>With this codelab you will deploy a delegate forging node on the Osmose Blockchain via Docker.</p>
-<h2 is-upgraded><strong>Feedback, question, suggestion</strong></h2>
+<h2><strong>Feedback, question, suggestion</strong></h2>
 <p>For any feedback or question you can use the <a href="https://github.com/osmose-collective/tutorials/issues" target="_blank">git issue formulaire </a>.<br>Or you can directly suggest improvement or trouble within the <a href="https://docs.google.com/document/d/1OC7XTDVL3yOAYyPX29Oa2K8PI8ibQgJRbD82YzObopg" target="_blank">googledoc used to create the codelab</a> (comments)<br>Eventually, a <a href="https://osmosecollective.slack.com/messages/CKHT2GYBD" target="_blank">dedicated channel</a> is at your disposal in the Osmose Collective slack to initiate a direct conversation with the contributors.</p>
-<h2 is-upgraded><strong>Explorer testnet OSMOSE</strong></h2>
+<h2><strong>Explorer testnet OSMOSE</strong></h2>
 <p><a href="http://testnet.osmose.world/#/" target="_blank"><paper-button class="colored" raised>Explorer testnet OSMOSE </paper-button></a></p>
-<h2 is-upgraded><strong>Wallet mobile and desktop</strong></h2>
+<h2><strong>Wallet mobile and desktop</strong></h2>
 <p><a href="https://github.com/osmose-collective/desktop-wallet" target="_blank"><paper-button class="colored" raised>Osmose Desktop Wallet Git </paper-button></a> </p>
 <p><a href="https://github.com/osmose-collective/mobile-wallet" target="_blank"><paper-button class="colored" raised>Osmose Mobile Wallet Git  </paper-button></a></p>
 <p><a href="https://play.google.com/store/apps/details?id=io.osmoseworld.wallet.mobile&hl=en_US" target="_blank"><paper-button class="colored" raised>Play store</paper-button></a></p>
@@ -83,7 +79,7 @@ docker-compose -f docker-compose-build.yml up -d</code></pre>
 <p>Once the command execution is successfully completed, the node is started and runs <strong>in relay mode</strong>.</p>
 <p>Then to get the <strong>logs </strong>:</p>
 <pre><code>docker exec -it core-testnet pm2 logs</code></pre>
-<h2 is-upgraded>Configure the node in forger mode</h2>
+<h2>Configure the node in forger mode</h2>
 <pre><code>cd core/docker/production/testnet
 nano testnet.env</code></pre>
 <p>Replace <strong>MODE=relay by MODE=forger</strong></p>
@@ -119,10 +115,33 @@ docker-compose -f docker-compose-build.yml build</code></pre>
     
   </google-codelab>
 
-  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49880327-14', 'auto');
+
+    (function() {
+      var gaCodelab = '';
+      if (gaCodelab) {
+        ga('create', gaCodelab, 'auto', {name: 'codelab'});
+      }
+
+      var gaView;
+      var parts = location.search.substring(1).split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var param = parts[i].split('=');
+        if (param[0] === 'viewga') {
+          gaView = param[1];
+          break;
+        }
+      }
+      if (gaView && gaView !== gaCodelab) {
+        ga('create', gaView, 'auto', {name: 'view'});
+      }
+    })();
+  </script>
 
 </body>
 </html>
