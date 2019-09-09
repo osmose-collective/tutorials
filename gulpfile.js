@@ -941,7 +941,7 @@ gulp.task('publish:prod:views', (callback) => {
   gcs.rsync(STAGING_BUCKET, PROD_BUCKET, opts, callback);
 });
 
-var gulp        = require('gulp');
+
 var deploy      = require('gulp-gh-pages');
 
 /**
