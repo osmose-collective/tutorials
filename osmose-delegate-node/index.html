@@ -107,7 +107,7 @@ DELEGATE_PASSPHRASE=trash swamp between indicate run belt toddler fade ranch bar
 <pre><code>cd core
 git pull</code></pre>
 <p>If the git pull tells you that there are conflicts, have your passphrase ready (for example in the docker/production/testnet/testnet.env file) and do a revert of the changes</p>
-<pre><code>git stash &amp;&amp; git pull &amp;&amp; git stash pop &amp;&amp; docker-compose -f</code></pre>
+<pre><code>git stash &amp;&amp; git pull &amp;&amp; git stash pop</code></pre>
 <p>Rebuild docker containers that have been modified</p>
 <pre><code>cd docker/production/testnet
 docker-compose -f docker-compose-build.yml build</code></pre>

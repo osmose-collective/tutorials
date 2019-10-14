@@ -3,7 +3,7 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2019-08-09T17:07:01Z",
+  "updated": "2019-10-14T11:20:25Z",
   "id": "osmose-delegate-node",
   "duration": 0,
   "title": "Deployment of an OSMOSE node via Docker",
