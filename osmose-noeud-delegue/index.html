@@ -197,14 +197,12 @@ DELEGATE_PASSPHRASE=trash swamp between indicate run belt toddler fade ranch bar
       </google-codelab-step>
     
       <google-codelab-step label="Mise à jour du noeud" duration="0">
-        <p>Récupérez les derniers changements du repo git</p>
+        <p>Récupérez les derniers changements du repo git (tout en conservant votre passphrase configurée)</p>
 <pre><code>cd core
-git pull</code></pre>
-<p>Si le git pull vous informe d&#39;un conflict, préparez votre passphrase (situé notamment dans docker/production/testnet/testnet.env) et faites un reset.</p>
-<pre><code>git reset --hard
-git pull</code></pre>
+git stash &amp;&amp; git pull &amp;&amp; git stash pop</code></pre>
 <p>Rebuild les containers docker ayant été modifiés</p>
-<pre><code>docker-compose -f docker-compose-build.yml up --build -d</code></pre>
+<pre><code>cd docker/production/testnet
+docker-compose -f docker-compose-build.yml up --build -d</code></pre>
 <p>Relancez les containers</p>
 <pre><code>docker-compose -f docker-compose-build.yml up -d</code></pre>
 

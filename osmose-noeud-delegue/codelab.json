@@ -3,7 +3,7 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2019-08-09T17:06:41Z",
+  "updated": "2019-10-14T11:30:01Z",
   "id": "osmose-noeud-delegue",
   "duration": 0,
   "title": "Déploiement d'un noeud OSMOSE via Docker",
